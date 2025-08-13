@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Suman Pal | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- FontAwesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <!-- Lottie for animated illustration -->
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Suman Pal | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- FontAwesome for icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <!-- Lottie for animated illustration -->
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+</head>
+<body>
+  <!-- Navigation -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">Suman Pal</div>
+      <ul>
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#qualifications" class="nav-link">Qualifications</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Home Section -->
+  <section id="home" class="section home-section">
+    <div class="home-left">
+      <h1>Hi, I’m <span>Suman Pal</span></h1>
+      <h3>Analyst</h3>
+      <p>I am a data analyst passionate about turning data into meaningful insights.I’m always curious and enjoy learning new things. Take a look around to see what I’ve worked on — let’s connect!</p>
+      <div class="social-icons">
+        <a href="mailto:sumanpal1523@gmail.com" target="_blank" aria-label="Email">
+          <i class="fas fa-envelope"></i>
+        </a>
+        <a href="https://instagram.com/summaann.p" target="_blank" aria-label="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://linkedin.com/in/sumanpal15" target="_blank" aria-label="LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://github.com/sumanpal15" target="_blank" aria-label="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+    </div>
+    <div class="home-right">
+      <img src="images/home_pic.png" alt="Suman Pal" class="profile-pic" />
+      <lottie-player
+        src="https://assets4.lottiefiles.com/packages/lf20_q5pk6p1k.json"
+        background="transparent"
+        speed="1"
+        loop
+        autoplay
+        class="lottie-animation"
+      ></lottie-player>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section about-section">
+    <h2>About Me</h2>
+    <div class="about-container">
+      <div class="about-left">
+        <img src="images/aboutme.jpeg" alt="Suman Pal" />
+      </div>
+      <div class="about-right">
+        <h3>My Introduction</h3>
+        <p>
+          Currently working at Cognizant as an Analyst. I enjoy solving complex
+          problems and creating impactful solutions in data analysis and
+          technology. As a part of my learning, I regularly practice LeetCode problems to strengthen my problem-solving skills. I have also completed several college projects related to Python, machine learning, and blockchain, which helped me gain hands-on experience in these domains.
+        </p>
+        <a href="Resume-Suman_pal (1) (1).pdf" class="btn" download>Download Resume</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Qualifications Section -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const tabs = document.querySelectorAll(".tab");
+      const educationContent = document.getElementById("education");
+      const experienceContent = document.getElementById("experience");
+
+      // Show only education by default
+      educationContent.style.display = "block";
+      experienceContent.style.display = "none";
+
+      tabs.forEach(tab => {
+        tab.addEventListener("click", function () {
+          tabs.forEach(t => t.classList.remove("active"));
+          this.classList.add("active");
+
+          if (this.dataset.tab === "education") {
+            educationContent.style.display = "block";
+            experienceContent.style.display = "none";
+          } else {
+            educationContent.style.display = "none";
+            experienceContent.style.display = "block";
+          }
+        });
+      });
+    });
+  </script>
+  <style>
+    .tab.active {
+      background-color: #28a745;
+      color: #fff;
+    }
+    .tab {
+      background: #eee;
+      color: #333;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      margin-right: 5px;
+      border-radius: 5px 5px 0 0;
+      outline: none;
+      transition: background 0.2s, color 0.2s;
+    }
+  </style>
+  <section id="qualifications" class="section qualifications-section">
+    <h2>Qualifications</h2>
+    <p>Here are my educational qualifications and work experience:</p>
+    <div class="qualifications-panel">  
+      <div class="qualifications-header">
+        <h3>Education & Experience</h3>
+        <p>Click on the tabs below to view my education and work experience.</p>
+      </div>
+    </div>
+      <div class="tabs">
+        <button class="tab active" data-tab="education">Education</button>
+        <button class="tab" data-tab="experience">Experience</button>
+      </div>
+      <div id="education" class="tab-content">
+        <h3>Education</h3>
+        <ul>
+          <li>
+            <strong>B.Sc in Computer Science & Cognitive Systems</strong>
+            <span>Loyola Academy Hyderabad, 2022-2025</span>
+          </li>
+          <li>
+            <strong>Higher Secondary (12th) </strong>
+            <span>Kendriya Vidyalaya AFA Hyderabad, 2020-2022</span>
+          </li>
+          <li>
+            <strong>Secondary (10th)</strong>
+            <span>Kendriya Vidyalaya AFA Hyderabad, 2019-2020</span>
+          </li>
+        </ul>
+      </div>
+      <div id="experience" class="tab-content">
+        <h3>Experience</h3>
+        <ul>
+          <li>
+            <strong>Analyst</strong>
+            <span>Cognizant, 2022 - Present</span>
+          </li>
+          <li>
+            <strong>Intern - Analyst Trainee </strong>
+            <span> Cognizant, June 2025 - August 2025</span>
+          </li>
+          <li>
+            <strong>Intern - Front-end Development</strong>
+            <span>IBM, June 2024 - August 2024</span>
+        </ul>
+      </div>
+      <style>
+      .tab-content {
+        display: none;
+        width: 100%;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+      </style>
+  <section id="skills" class="section skills-section">
+    <h2>Skills</h2>
+    <script>
+      // Animate skills when section is shown
+      function animateSkills() {
+        const skillItems = document.querySelectorAll('.skills-container .skill');
+        skillItems.forEach((item, idx) => {
+          item.classList.remove('pop-in');
+          setTimeout(() => {
+            item.classList.add('pop-in');
+          }, idx * 100);
+        });
+      }
+
+      document.addEventListener('DOMContentLoaded', function () {
+        // Animate on navigation click
+        document.querySelector('a[href="#skills"]').addEventListener('click', function () {
+          setTimeout(animateSkills, 350);
+        });
+
+        // Animate on initial load if skills section is visible
+        if (window.location.hash === "#skills") {
+          setTimeout(animateSkills, 350);
+        }
+      });
+    </script>
+    <style>
+      .pop-in {
+        opacity: 1 !important;
+        transform: scale(1) !important;
+        animation: popIn 0.5s forwards;
+      }
+      .skills-container .skill {
+        opacity: 0;
+        transform: scale(0.7);
+        transition: opacity 0.2s, transform 0.2s;
+      }
+      @keyframes popIn {
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+    </style>
+    <div class="skills-container" style="display: flex; flex-wrap: wrap; gap: 24px;">
+      <div class="skill" style="text-align: center;">
+        <i class="fas fa-database" style="font-size: 2.5em; color: #00618A;"></i>
+        <h3>SQL</h3>
+      </div>
+      <div class="skill" style="text-align: center;">
+        <i class="fas fa-database" style="font-size: 2.5em; color: #00758F;"></i>
+        <h3>PL/SQL</h3>
+      </div>
+      <div class="skill" style="text-align: center;">
+        <i class="fab fa-html5" style="font-size: 2.5em; color: #E34F26;"></i>
+        <h3>HTML5</h3>
+      </div>
+      <div class="skill" style="text-align: center;">
+        <i class="fab fa-css3-alt" style="font-size: 2.5em; color: #1572B6;"></i>
+        <h3>CSS3</h3>
+      </div>
+      <div class="skill" style="text-align: center;">
+        <i class="fab fa-js-square" style="font-size: 2.5em; color: #F7DF1E;"></i>
+        <h3>JavaScript</h3>
+      </div>
+      <div class="skill" style="text-align: center;">
+        <i class="fab fa-python" style="font-size: 2.5em; color: #3776AB;"></i>
+        <h3>Python</h3>
+      </div>
+      <div class="skill" style="text-align: center;">
+        <i class="fab fa-cuttlefish" style="font-size: 2.5em; color: #00599C;"></i>
+        <h3>C++</h3>
+      </div>
+      <div class="skill" style="text-align: center;">
+        <i class="fas fa-chart-bar" style="font-size: 2.5em; color: #F2C811;"></i>
+        <h3>Power BI</h3>
+      </div>
+    </div>
+    <div class="skills-container" style="display: flex; flex-wrap: wrap; gap: 24px; margin-top: 24px;">
+      <div class="skill" style="text-align: center;">
+        <i class="fab fa-java" style="font-size: 2.5em; color: #007396;"></i>
+        <h3>Java</h3>
+      </div>
+      <div class="skill" style="text-align: center;">
+        <i class="fas fa-robot" style="font-size: 2.5em; color: #00B894;"></i>
+        <h3>Machine Learning</h3>
+      </div>
+      <div class="skill" style="text-align: center;">
+        <i class="fas fa-file-excel" style="font-size: 2.5em; color: #217346;"></i>
+        <h3>MS Excel</h3>
+      </div>
+      <div class="skill" style="text-align: center;">
+        <i class="fas fa-file-powerpoint" style="font-size: 2.5em; color: #D24726;"></i>
+        <h3>MS PowerPoint</h3>
+      </div>
+    </div>
+  </section>
+  <!-- Projects Section -->
+  <section id="projects" class="projects-section">
+  <h2>Projects</h2>
+  <div class="projects-container">
+
+    <!-- Project Card -->
+    <div class="project-card">
+      <div class="project-image">
+        <img src="images/blockchain_loginpage.png" alt="Blockchain Authentication" class="img-front">
+        <img src="images/blockchain_manufacturerpage.png" alt="Blockchain Login Page" class="img-back">
+      </div>
+      <div class="project-content">
+        <h3>Blockchain Based Product Authentication</h3>
+        <p>
+          Created a blockchain-based system for product authentication using QR codes.
+          The system allows users to verify the authenticity of products through a decentralized ledger.
+        </p>
+        <p class="tools"><strong>Tools:</strong> Blockchain, Python, QR Code, Flask</p>
+      </div>
+    </div>
+    <!-- Project Card -->
+     <div class="project-card">
+      <div class="project-image">
+        <img src="images/diabetes_accuracy.png" alt="Diabetes Prediction" class="img-front">
+      </div>
+      <div class="project-content">
+        <h3>Diabetes Prediction</h3>
+        <p>
+           Developed a Python-based machine learning model to predict the likelihood of diabetes based on patient health parameters such as glucose levels, blood pressure, BMI, and age. Implemented data preprocessing, feature selection, and model training using algorithms like Random Forest and Logistic Regression. Achieved an accuracy score of X% (replace with your score) and optimized the model for use in laboratory environments where healthcare professionals can input data directly into the backend for real-time predictions
+        </p>
+        <p class="tools"><strong>Tools:</strong>Python, Scikit learning, Pandas, Numpy Machine learning,</p>
+      </div>
+    </div>
+</section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section contact-section">
+    <h2>Contact Me</h2>
+    <div class="contact-info" style="margin-bottom: 16px;">
+      <p><i class="fas fa-envelope" style="color: #28a745; margin-right: 8px;"></i> Email: <a href="mailto:sumanpal1523@gmail.com">sumanpal1523@gmail.com</a></p>
+      <p><i class="fas fa-map-marker-alt" style="color: #28a745; margin-right: 8px;"></i> Location: Hyderabad, Telangana</p>
+    </div></div>
+    <form action="https://formspree.io/f/mjvowzqk" method="POST" class="contact-form">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="_replyto" placeholder="Your Email" required />
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+    </section>
+  </body>
+</html>
+
